@@ -1,21 +1,26 @@
 '''
 Created on 27/02/2012
 
-@author: Rabo
+@author: Ricardo Andres Burgos Ocampo
 '''
 
+def buscar_variables(vec_variables,variable):
+    for elemento in vec_variables:
+        if elemento ==variable:
+            return True
+    return False
+            
+def agregar_variable(vec_variable,variable):
+    vec_variable.append(variable)
+    return vec_variable
+
     
-    
-def decc_pal_res(cadena,linea):
+def decc_pal_res(cadena,linea,vec_variables):
         
     def cargue():
-        print "contenido"
-        return True
-    
+        return buscar_variables(vec_variables,linea[1])
     def almacene():
-        
-        print "contenido"
-        
+        return buscar_variables(vec_variables,linea[1])
     def vaya():
         print "contenido"
         
