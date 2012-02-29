@@ -12,7 +12,7 @@ def buscar_variables(vec_variables,variable):
 
             
 def agregar_variable(vec_variables,variable,contenido):
-    x=[variable,contenido]
+    x=[variable,contenido.strip("\n")]
     vec_variables.append(x)
     return vec_variables
 
@@ -21,7 +21,7 @@ def agregar_variable(vec_variables,variable,contenido):
 def decc_pal_res(cadena,linea,vec_variables):
         
     def cargue():
-        return buscar_variables(vec_variables,linea[1])
+        return buscar_variables(vec_variables,linea[1].strip())
     def almacene():
         return buscar_variables(vec_variables,linea[1])
     def vaya():
