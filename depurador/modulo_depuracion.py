@@ -6,13 +6,16 @@ Created on 27/02/2012
 
 def buscar_variables(vec_variables,variable):
     for elemento in vec_variables:
-        if elemento ==variable:
+        if elemento[0] == variable:
             return True
     return False
+
             
-def agregar_variable(vec_variable,variable):
-    vec_variable.append(variable)
-    return vec_variable
+def agregar_variable(vec_variables,variable,contenido):
+    x=[variable,contenido]
+    vec_variables.append(x)
+    return vec_variables
+
 
     
 def decc_pal_res(cadena,linea,vec_variables):
@@ -28,7 +31,18 @@ def decc_pal_res(cadena,linea,vec_variables):
         print "contenido"
         
     def nueva():
-        print "contenido"
+        Num_parametros=len(linea)
+        if Num_parametros==4:
+            agregar_variable(vec_variables, linea[1],linea[3])
+            print vec_variables[0]
+            return True
+        elif Num_parametros==3:
+            agregar_variable(vec_variables, linea[1],0)
+            return True
+        else:
+            return False
+                    
+        
     
     def etiqueta():
         print "contenido"

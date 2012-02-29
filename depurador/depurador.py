@@ -32,7 +32,7 @@ class depurador(object):
     def manejo_archivo(self):
         f= open(self.File,"r")
         contador=0
-        vec_variables=["m"]
+        vec_variables=[]
         while True:
             linea=f.readline()
             contador+=1
