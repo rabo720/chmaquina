@@ -51,7 +51,7 @@ class depurador(object):
                 return True
             linea = linea.split(" ")
             contador += 1
-            if linea[0] == "etiqueta" or linea[0] == "nueva":
+            if linea[0] == "etiqueta":
                     if self.revision_linea(linea, self.vec_variables, self.vec_etiquetas, a) == False:
                         print "se debe realizar una correccion en la line numero ", contador
                         return False
@@ -66,7 +66,7 @@ class depurador(object):
                 print "no se han encontrado errores de sintanxis"
                 return True
             linea =linea.split(" ")
-            if linea[0] != "etiqueta" and linea[0] != "nueva" :
+            if linea[0] != "etiqueta":
                 if not linea[0].startswith("//") and not linea[0].startswith("\n"):
                     if self.revision_linea(linea, self.vec_variables, self.vec_etiquetas, contador) == False:
                         print "se debe realizar una correccion en la line numero ", contador
