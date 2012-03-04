@@ -12,8 +12,11 @@ import depurador
 
 if __name__ == '__main__':
     
+    vec_variables=[]
+    vec_etiquetas=[]
     a="algoritmo.txt" #variable que aloja el archivo 
-    b=depurador.depurador(a)#creacion de objeto
+    f= open(a,"r")
+    b=depurador.depurador(f,vec_variables,vec_etiquetas)#creacion de objeto
     b.manejo_archivo()#llamdo de un metodo del objeto
     
     
