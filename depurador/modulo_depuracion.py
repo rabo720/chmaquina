@@ -3,7 +3,7 @@ Created on 27/02/2012
 
 @author: Ricardo Andres Burgos Ocampo
 '''
-import re
+
 
 def buscar_variables(vec,variable):
     variable=variable.strip()
@@ -51,8 +51,7 @@ def decc_pal_res(linea,vec_variables,vec_etiquetas,num_linea):
            "elimine",
            "extraiga",
            "muestre",
-           "imprima",
-           "retorne"]
+           "imprima",]
     
     tipo_variblea=["I","C","R"]
     
@@ -102,8 +101,19 @@ def decc_pal_res(linea,vec_variables,vec_etiquetas,num_linea):
         else:
             return False
     
+    def retorne():
+        if Num_parametros==2:
+            if linea[1]=="0":
+                return True
+            else:
+                return False
+        else:
+            return False
+        
     def default():
         return False
+    
+        
     
     dicc_func={
                "depuracion_basica":depuracion_basica,
@@ -111,7 +121,8 @@ def decc_pal_res(linea,vec_variables,vec_etiquetas,num_linea):
                "vayasi":vayasi,
                "nueva":nueva,
                "etiqueta":etiqueta,
-               "default":default
+               "default":default,
+               "retorne":retorne
                }    
 
     if linea[0] in lista:
