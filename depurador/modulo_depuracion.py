@@ -23,14 +23,13 @@ def agregar_etiqueta(vec_etiquetas,linea):
     vec_etiquetas.append(x)
 
 def casteo_variable(variable, tipo):
-    
-    if variable == "I":
+    if tipo == "I":
         variable=int(variable)
         return variable
-    elif variable == "R":
+    elif tipo == "R":
         variable=float(variable)
         return variable
-    elif variable == "C":
+    elif tipo == "C":
         variable=str(variable)
         return variable
     

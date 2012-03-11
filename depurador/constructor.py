@@ -8,16 +8,13 @@ Created on 27/02/2012
     si se ejecuta el programa se vera como se realiza el manejo de esta linea.
 
 """
-import depurador
+from procesador import procesador
 
 if __name__ == '__main__':
     
-    vec_variables=[]
-    vec_etiquetas=[]
     a="algoritmo.txt" #variable que aloja el archivo 
-    f= open(a,"r")
-    b=depurador.depurador(f,vec_variables,vec_etiquetas)#creacion de objeto
-    b.manejo_archivo()#llamdo de un metodo del objeto
+    f= open(a,"r")#se abre el archivo
+    procesador_ob=procesador(f)
+    procesador_ob.cargar_programa()
     
-    
-    
+        
